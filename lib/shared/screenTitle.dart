@@ -8,12 +8,8 @@ class ScreenTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
-      child: Text(
-        text!,
-        style: TextStyle(fontSize: 36, color: Colors.white, fontWeight: FontWeight.bold),
-      ),
       tween: Tween<double>(begin: 0, end: 1),
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.easeIn,
       builder: (BuildContext ? context, double ? _val, Widget ? child) {
         return Opacity(
@@ -24,6 +20,10 @@ class ScreenTitle extends StatelessWidget {
           ),
         );
       },
+      child: Text(
+        text!,
+        style: const TextStyle(fontSize: 36, color: Colors.white, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

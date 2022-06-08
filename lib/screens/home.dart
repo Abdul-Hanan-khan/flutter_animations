@@ -5,6 +5,8 @@ import '../shared/tripList.dart';
 
 
 class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   _HomeState createState() => _HomeState();
 }
@@ -15,8 +17,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.all(20),
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/bg.png"), 
             fit: BoxFit.fitWidth,
@@ -26,8 +28,8 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 30),
-            SizedBox(
+            const SizedBox(height: 30),
+            const SizedBox(
               height: 160,
               child: ScreenTitle(text: 'Future Fest'),
             ),

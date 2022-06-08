@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Heart extends StatefulWidget {
+  const Heart({Key? key}) : super(key: key);
+
   @override
   _HeartState createState() => _HeartState();
 }
@@ -17,7 +19,7 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
     super.initState();
 
     _controller = AnimationController(
-      duration: Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
       vsync: this,
     );
 
