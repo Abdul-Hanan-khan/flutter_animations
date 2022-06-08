@@ -8,7 +8,7 @@ import '../shared/heart.dart';
 class Details extends StatelessWidget {
 
   final Trip ?trip;
-  const Details({Key? key,  @required this.trip }) : super(key: key);
+  Details({ @required this.trip });
 
   @override
   Widget build(BuildContext context) {
