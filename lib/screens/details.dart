@@ -33,6 +33,7 @@ class Details extends StatelessWidget {
             )
           ),
           const SizedBox(height: 30),
+
           ListTile(
             title: Text(
               trip!.title!,
