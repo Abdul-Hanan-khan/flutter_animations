@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// import 'package:lipsum/lipsum.dart' as lipsum;
-
 import '../models/Trip.dart';
 import '../shared/heart.dart';
 
@@ -45,10 +43,12 @@ class Details extends StatelessWidget {
             trailing: Heart(),
           ),
           Padding(
-              padding: const EdgeInsets.all(18),
-              child: Text(
-                  "this is just a dummy text for the purpose of testing the paragraph. it is just to see the changes committed by the ",
-                  style: TextStyle(color: Colors.grey[600], height: 1.4))),
+            padding: const EdgeInsets.all(18),
+            child: Text(
+              "this is just a dummy text for the purpose of testing the paragraph. it is just to see the changes committed by the ",
+              style: TextStyle(color: Colors.grey[600], height: 1.4),
+            ),
+          ),
         ],
       ),
     );

@@ -27,9 +27,9 @@ class _HomeState extends State<Home> {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const SizedBox(height: 30),
-            const SizedBox(
+          children: const <Widget>[
+            SizedBox(height: 30),
+            SizedBox(
               height: 160,
               child: ScreenTitle(text: 'Future Fest'),
             ),
