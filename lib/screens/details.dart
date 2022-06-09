@@ -6,9 +6,9 @@ import '../models/Trip.dart';
 import '../shared/heart.dart';
 
 class Details extends StatelessWidget {
+  final Trip? trip;
 
-  final Trip ?trip;
-  Details({ @required this.trip });
+  Details({@required this.trip});
 
   @override
   Widget build(BuildContext context) {
@@ -30,37 +30,27 @@ class Details extends StatelessWidget {
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
               ),
-            )
+            ),
           ),
           const SizedBox(height: 30),
-
           ListTile(
-            title: Text(
-              trip!.title!,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                color: Colors.grey[800]
-              )
-            ),
+            title: Text(trip!.title!,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.grey[800])),
             subtitle: Text(
-              '${trip!.nights} night stay for only \$${trip!.price}',
-              style: const TextStyle(letterSpacing: 1)
-            ),
-            trailing: Heart()
-           ),
-          Padding(
-            padding: const EdgeInsets.all(18),
-            child: Text(
-             "this is just a dummy text for the purpose of testing the paragraph. it is just to see the changes committed by the ",
-              style: TextStyle(
-                color: Colors.grey[600],
-                height: 1.4
-              )
-            )
+                '${trip!.nights} night stay for only \$${trip!.price}',
+                style: const TextStyle(letterSpacing: 1)),
+            trailing: Heart(),
           ),
+          Padding(
+              padding: const EdgeInsets.all(18),
+              child: Text(
+                  "this is just a dummy text for the purpose of testing the paragraph. it is just to see the changes committed by the ",
+                  style: TextStyle(color: Colors.grey[600], height: 1.4))),
         ],
-      )
+      ),
     );
   }
 }
