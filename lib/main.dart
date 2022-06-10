@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/screens/home.dart';
-import 'package:flutter_animation/screens/sandbox.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 
 void main() {
@@ -13,9 +13,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Future Fest',
-      home: Home(),
+    return ResponsiveSizer(
+      builder: (context,orientation,screenType){
+        return const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Future Fest',
+          home: Home(),
+        );
+      },
     );
   }
 }

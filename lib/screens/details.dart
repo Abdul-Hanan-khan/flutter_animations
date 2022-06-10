@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/screens/circle_animation.dart';
 
 import '../models/Trip.dart';
 import '../shared/heart.dart';
@@ -49,6 +50,10 @@ class Details extends StatelessWidget {
               style: TextStyle(color: Colors.grey[600], height: 1.4),
             ),
           ),
+
+          RaisedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SampleAnimation()));
+          },child: Text("Circle animation"),)
         ],
       ),
     );

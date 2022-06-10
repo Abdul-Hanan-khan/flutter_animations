@@ -11,11 +11,11 @@ class ScreenTitle extends StatelessWidget {
       tween: Tween<double>(begin: 0, end: 1),
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeIn,
-      builder: (BuildContext ? context, double ? _val, Widget ? child) {
+      builder: (BuildContext ? context, double ? val, Widget ? child) {
         return Opacity(
-          opacity: _val!,
+          opacity: val!,
           child: Padding(
-              padding: EdgeInsets.only(top: _val * 20),
+              padding: EdgeInsets.only(top: val * 20),
               child: child
           ),
         );
